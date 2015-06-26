@@ -162,13 +162,14 @@ Client *createClient(Handle serverHandle, const ServerEventNotifier* eventNotifi
       new_eventHandler.instance = client;
       new_eventHandler.getHandle = getClientSocket;
       new_eventHandler.handleEvent = handleReadEvent;
-
-      reactor->Register(&new_eventHandler);
       
       assert(NULL != eventNotifier);
       client->setServerEventNotifier((ServerEventNotifier*)eventNotifier);
       client->setClientSocket(new_clientSocket);
       client->setServerEventHandler(new_eventHandler);
+
+      reactor->Register(&new_eventHandler);
+
    }
    
    return client;
