@@ -62,11 +62,11 @@ Server:: Server(int num)
 {
   /* All connected clients able to send diagnostics messages. */
 
-  Client **clients = new Client*[num];
+  clients = new Client*[num];
 
   for(int i = 0; i < num; i++)
   {
-    clients[i] = new Client;
+    clients[i] = NULL;
   }
 
   cout << "create a new server.\n" << endl;
