@@ -1,9 +1,16 @@
-/*************************************************************************
-  > File Name: main.c
-  > Author: Linhu Ying
-  > Mail:  linhu.ying@u-blox.com
-  > Created Time: Fri Mar 13 11:43:08 2015
- ************************************************************************/
+/**********************************************************
+* 
+* @file main.c
+* 
+* @brief  client test function, send a message to server.
+* 
+*
+* @author  Linhu Ying
+* @email    ylh1986@hotmail.com
+* @date     27/06/2015
+*
+***********************************************************/
+
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netinet/in.h>
